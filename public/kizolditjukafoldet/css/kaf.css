@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin:auto;
+    max-width: 900px;
+}
+
+article{
+    margin-top: 30px;
+}
+
+fieldset,legend, nav{
+    border: 1px solid lightgreen;
+    border-radius: 4px;
+}
+
+legend{
+    background-color: rgb(127, 255, 212,0.2);
+    padding: 5px;
+}
+
+
+form, #kereses, nav, #chart_div, #szures-osztalyra{
+    margin-bottom: 30px;
+ 
+}
+
+#szures-osztalyra{
+    width: 100%;
+}
+
+#formfejlec{   
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    align-content: space-around;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.pontinfo, .allapotinfo{
+    display: none;
+}
+
+th:hover{
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+
+    #formfejlec{   
+        display:flex;
+        flex-direction: column;
+        gap: 5px;
+      
+}
+
+#formfejlec select, #formfejlec input[type='button']{
+    width: 100%;
+}
+
+.pontinfo, .allapotinfo{
+    display: block;
+}
+
+th, .pont, td:last-child{
+    display:none;
+}
+
+}

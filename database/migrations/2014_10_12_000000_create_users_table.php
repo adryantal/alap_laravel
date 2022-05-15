@@ -15,10 +15,12 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('nev');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('jelszo');
+            $table->string('osztalyId',6)->references('osztalyId')->on('bejegyzes')->onDelete('cascade')->onUpdate('cascade'); 
+            //!!! referencia, foreign key nem jó
             $table->rememberToken();
             $table->timestamps();
         });

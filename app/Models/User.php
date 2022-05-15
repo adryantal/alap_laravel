@@ -41,4 +41,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+         //adott user által beszúrt bejegyzések
+         public function bejegyzesek()
+         {
+             return $this->hasMany(Bejegyzes::class);
+         }
 }
